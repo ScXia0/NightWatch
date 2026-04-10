@@ -20,7 +20,7 @@ npm start
 
 ## 部署到公网
 
-这个项目已经补好了 [render.yaml](/Users/didi/Documents/EduPPT/GameTest/render.yaml)，可以直接走 Render:
+这个项目已经补好了 [render.yaml](/Users/didi/Documents/NightWatch/render.yaml)，可以直接走 Render:
 
 1. 把当前目录上传到 GitHub 仓库 `NightWatch`
 2. 登录 Render，选择 `New +` -> `Blueprint`
