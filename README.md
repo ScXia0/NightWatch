@@ -1,4 +1,4 @@
-# 末夜守营 Demo
+# NightWatch / 末夜守营 Demo
 
 一个浏览器多人合作生存原型:
 
@@ -22,7 +22,7 @@ npm start
 
 这个项目已经补好了 [render.yaml](/Users/didi/Documents/EduPPT/GameTest/render.yaml)，可以直接走 Render:
 
-1. 把当前目录上传到 GitHub 仓库
+1. 把当前目录上传到 GitHub 仓库 `NightWatch`
 2. 登录 Render，选择 `New +` -> `Blueprint`
 3. 连接这个 GitHub 仓库
 4. Render 会自动识别根目录里的 `render.yaml`

@@ -1,8 +1,8 @@
 {
-  "name": "gametest",
+  "name": "nightwatch",
   "version": "1.0.0",
   "private": true,
-  "description": "Multiplayer co-op survival demo",
+  "description": "NightWatch multiplayer survival demo",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
