@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: gametest-last-night-camp
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /
+    envVars:
+      - key: NODE_VERSION
+        value: 22.22.1

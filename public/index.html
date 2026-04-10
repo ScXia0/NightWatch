@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>末夜守营 Demo</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="panel hero">
+        <div>
+          <p class="eyebrow">多人合作生存 Demo</p>
+          <h1>末夜守营</h1>
+          <p class="subtitle">
+            白天搜资源，夜晚守营地。撑过三次夜袭就算赢。
+          </p>
+        </div>
+        <div class="hero-stats">
+          <div>
+            <span>房间人数</span>
+            <strong>1-4 人</strong>
+          </div>
+          <div>
+            <span>单局时长</span>
+            <strong>约 4 分钟</strong>
+          </div>
+          <div>
+            <span>当前版本</span>
+            <strong>可玩原型</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="layout">
+        <aside class="panel sidebar">
+          <div id="connectionStatus" class="status-pill">连接中...</div>
+
+          <div class="block">
+            <label for="nameInput">昵称</label>
+            <input id="nameInput" maxlength="18" value="守夜人" />
+          </div>
+
+          <div id="entryCard" class="block">
+            <button id="createRoomButton" class="primary">创建房间</button>
+            <div class="join-row">
+              <input id="roomCodeInput" maxlength="5" placeholder="房间码" />
+              <button id="joinRoomButton">加入</button>
+            </div>
+          </div>
+
+          <div id="lobbyCard" class="block hidden">
+            <p class="small-label">房间码</p>
+            <div class="room-code-row">
+              <strong id="roomCodeDisplay">-----</strong>
+              <button id="copyRoomButton">复制</button>
+            </div>
+            <p id="hostHint" class="muted"></p>
+            <ul id="playerList" class="player-list"></ul>
+            <button id="startGameButton" class="primary">开始守夜</button>
+          </div>
+
+          <div class="block">
+            <p class="small-label">操作</p>
+            <ul class="help-list">
+              <li>`WASD / 方向键` 移动</li>
+              <li>`鼠标` 瞄准</li>
+              <li>`空格 / 左键` 攻击</li>
+              <li>`E` 存资源 / 救队友</li>
+            </ul>
+          </div>
+
+          <div class="block">
+            <p class="small-label">玩法目标</p>
+            <p class="muted">
+              砍树和采矿后回营地按 `E` 强化营地。夜晚怪物会冲营，营地血量清空或全员倒地就输了。
+            </p>
+          </div>
+
+          <div class="block">
+            <p class="small-label">战报</p>
+            <div id="logList" class="log-list"></div>
+          </div>
+        </aside>
+
+        <section class="panel stage-panel">
+          <div class="hud">
+            <div>
+              <span class="small-label">阶段</span>
+              <strong id="phaseLabel">大厅</strong>
+            </div>
+            <div>
+              <span class="small-label">倒计时</span>
+              <strong id="timerLabel">--</strong>
+            </div>
+            <div>
+              <span class="small-label">营地</span>
+              <strong id="campLabel">HP --</strong>
+            </div>
+            <div>
+              <span class="small-label">背包</span>
+              <strong id="inventoryLabel">木 0 / 矿 0</strong>
+            </div>
+          </div>
+
+          <canvas id="gameCanvas" width="960" height="540"></canvas>
+
+          <div id="overlay" class="overlay">
+            <div class="overlay-card">
+              <p class="eyebrow">等待开始</p>
+              <h2 id="overlayTitle">创建房间后邀请朋友加入</h2>
+              <p id="overlayText">
+                这个版本支持 1 到 4 人联机。主机点击开始后进入一局制守夜模式。
+              </p>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <script src="/client.js" defer></script>
+  </body>
+</html>
